@@ -63,9 +63,6 @@ WORKDIR $PROJECT_DIR
 
 # ======== build the conda environment ========
 ENV ENV_PREFIX $PROJECT_DIR/env
-RUN conda  create -n grcnn python numpy=1.19 pytorch torchvision opencv scikit-image tensorboardx matplotlib pillow
-RUN conda init bash \
-    && . ~/.bashrc \
-    && conda activate grcnn \
-    && pip install torchsummary
+RUN conda env create -f $PROJECT_DIR/LearnfromIntents/environment.yml
+
 

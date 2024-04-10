@@ -34,7 +34,7 @@ def generate_random_object_pose():
 
     p.connect(p.DIRECT)
     p.setGravity(0, 0, -9.81)
-    table_urdf = './model/env/table.urdf'
+    table_urdf = '/Project/LearnfromIntents/model/env/table.urdf'
     table_position = [0, 0, -0.05/2]
     p.loadURDF(table_urdf, table_position,
                p.getQuaternionFromEuler([0, 0, 0]), useFixedBase=True)
